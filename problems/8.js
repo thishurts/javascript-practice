@@ -7,7 +7,9 @@
  * @example [1, 2, 3] -> 6
 */
 function problem(numbers) {
-    return null;
+    let size = numbers.length;
+    let temp = numbers.reduce(function(result,num){return result + num; }, 0);
+    return temp / size;
 }
 
 const tests = [

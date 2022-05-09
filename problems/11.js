@@ -8,7 +8,20 @@
  * @example "racecar" -> true
 */
 function problem(str) {
-    return null;
+    str = str.toLowerCase();
+    let i = 0;
+    let j = str.length - 1;
+    while(i != j){
+        if ((/[a-z]/).test(str[i]) && (/[a-z]/).test(str[j])){
+            if(str[i] != str[j]) return false;
+            i++;
+            j--;
+            continue;
+        }
+        if (!(/[a-z]/).test(str[i]))  i++; 
+        if (!(/[a-z]/).test(str[j]))  j--;  
+    }
+    return true;
 }
 
 const tests = [
